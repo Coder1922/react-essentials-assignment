@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import './PortfolioCard.css';
 
-const SkillBadge = ({ skill }) => (
-  <span className="skill-badge">{skill}</span>
-);
 
 const PortfolioCard = () => {
 
