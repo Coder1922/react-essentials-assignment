@@ -1,38 +1,169 @@
-.App {
-  text-align: center;
+/* --- Global & Layout (Part 1) --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background-color: #f4f7f6;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-top: 50px;
+}
+
+.app-container {
+  background: white;
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* --- Task Input Forms --- */
+.task-input-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.task-input-form input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.task-input-form input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* --- Advanced Styling & Hover Effects (Part 2) --- */
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-add {
+  background-color: #007bff;
   color: white;
 }
+.btn-add:hover { background-color: #0056b3; }
 
-.App-link {
-  color: #61dafb;
+.task-list {
+  list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.3s ease;
+}
+
+.task-item:hover {
+  background-color: #f9f9f9;
+}
+
+/* Grey-out completed tasks */
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.task-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+}
+
+.task-content input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.edit-input {
+  flex: 1;
+  padding: 6px;
+  font-size: 16px;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+}
+
+/* Button Groups */
+.button-group {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-edit {
+  background-color: #ffc107;
+  color: #333;
+}
+.btn-edit:hover { background-color: #e0a800; }
+
+.btn-delete {
+  background-color: #dc3545;
+  color: white;
+}
+.btn-delete:hover { background-color: #c82333; }
+
+.task-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+.btn-clear {
+  background-color: #6c757d;
+  color: white;
+  padding: 6px 12px;
+  font-size: 12px;
+}
+.btn-clear:hover { background-color: #5a6268; }
+
+.empty-message {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .app-container {
+    padding: 20px;
+    border-radius: 0;
   }
-  to {
-    transform: rotate(360deg);
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .button-group {
+    width: 100%;
+    justify-content: flex-end;
   }
 }
