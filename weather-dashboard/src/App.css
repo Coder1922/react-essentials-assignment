@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.weather-dashboard {
+  background: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  max-width: 450px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.header h1 {
+  text-align: center;
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+}
+
+/* Search Section */
+.search-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  border-color: #5b86e5;
+}
+
+.search-button {
+  background-color: #5b86e5;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.search-button:hover {
+  background-color: #4a6ec4;
+}
+
+/* Status Messages */
+.loading-message {
+  text-align: center;
+  color: #555;
+  font-style: italic;
+  margin: 20px 0;
+}
+
+.error-message {
+  text-align: center;
+  color: #d9534f;
+  background-color: #fdf2f2;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ebccd1;
+  margin: 20px 0;
+}
+
+/* Weather Card */
+.weather-card {
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.weather-card h2 {
+  color: #222;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.weather-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.temperature {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #333;
+  margin-left: -10px;
+}
+
+.condition {
+  color: #666;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.weather-details {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.detail-item .label {
+  font-size: 0.85rem;
+  color: #777;
+  text-transform: uppercase;
+}
+
+.detail-item .value {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.refresh-time {
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 15px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
