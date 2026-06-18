@@ -1,0 +1,32 @@
+body { margin: 0; font-family: sans-serif; background-color: #f8fafc; color: #334155; }
+.app-container { max-width: 900px; margin: 40px auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+
+.header h1 { margin: 0 0 10px 0; font-size: 24px; color: #0f172a; }
+.header p { color: #64748b; margin-top: 0; margin-bottom: 30px; font-size: 15px; }
+
+.search-bar { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; position: relative; }
+.search-bar input { flex: 1; padding: 12px 15px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 15px; outline: none; }
+.clear-icon { position: absolute; right: 110px; background: none; border: none; color: #94a3b8; cursor: pointer; }
+.reset-btn { background: #3b82f6; color: white; border: none; padding: 12px 20px; border-radius: 8px; cursor: pointer; font-weight: 500; }
+
+.results-count { font-size: 14px; color: #64748b; margin-bottom: 20px; }
+
+.content-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+
+.column-header { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid #e2e8f0; padding-bottom: 10px; margin-bottom: 20px; }
+.column-header h3 { margin: 0; font-size: 16px; color: #1e293b; }
+.column-header span { font-size: 12px; color: #94a3b8; }
+
+.empty-state { color: #64748b; font-size: 14px; font-style: italic; }
+
+.movie-card { display: flex; justify-content: space-between; align-items: center; padding: 15px; background: #f1f5f9; border-radius: 8px; margin-bottom: 15px; }
+.movie-info h4 { margin: 0 0 8px 0; font-size: 16px; color: #0f172a; }
+.movie-info h4 span { font-weight: normal; color: #64748b; font-size: 14px; margin-left: 5px; }
+.movie-meta { display: flex; align-items: center; gap: 10px; font-size: 13px; color: #64748b; }
+.rating { background: #fbbf24; color: #78350f; padding: 2px 6px; border-radius: 4px; font-weight: bold; }
+
+.fav-btn { padding: 8px 12px; border-radius: 6px; border: 1px solid #cbd5e1; background: white; cursor: pointer; color: #64748b; font-weight: 500; }
+.fav-btn.favorited { background: #ef4444; color: white; border-color: #ef4444; }
+
+.favorites-list { list-style: none; padding: 0; margin: 0; }
+.favorites-list li { padding: 8px 0; color: #475569; font-size: 14px; }
